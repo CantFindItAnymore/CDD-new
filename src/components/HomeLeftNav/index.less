@@ -1,0 +1,74 @@
+.contaienr {
+  width: 100px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+  background: #b07954;
+  .logoContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & > img {
+    height: 50px;
+    width: 50px;
+    margin: 50px 0;
+  }
+
+  .wxCode {
+    position: absolute;
+    bottom: 100px;
+    height: 80px;
+    width: 80px;
+  }
+
+  .item {
+    height: 80px;
+    width: 60px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
+    // left: 30px;
+    z-index: 999;
+    .free {
+      width: 60px;
+      color: #fff;
+      // animation: toFree 0.5s linear;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .active {
+      width: 60px;
+      color: #fff;
+      font-weight: 600;
+      // animation: toActive 0.5s linear;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+}
+
+// @keyframes toFree {
+//   from {
+//     width: 60px;
+//   }
+//   to {
+//     width: 20px;
+//   }
+// }
+
+// @keyframes toActive {
+//   from {
+//     width: 20px;
+//   }
+//   to {
+//     width: 60px;
+//   }
+// }

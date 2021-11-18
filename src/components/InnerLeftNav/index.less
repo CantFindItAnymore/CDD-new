@@ -1,0 +1,77 @@
+.contaienr {
+  width: 100px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // background: chartreuse;
+  position: fixed;
+  top: 0;
+  bottom: 150px;
+  z-index: 9;
+  .item {
+    height: 80px;
+    width: 60px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
+    // left: 30px;
+    .free {
+      width: 60px;
+      color: #a1a1a1;
+      // animation: toFree .5s linear;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .active {
+      width: 60px;
+      color: #000;
+      font-weight: 600;
+      // animation: toActive .5s linear;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+
+  .logo {
+    height: 50px;
+    width: 50px;
+    margin: 50px 0;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  & > img {
+    height: 50px;
+    width: 50px;
+    margin: 50px 0;
+  }
+
+  .wxCode {
+    position: absolute;
+    bottom: 100px;
+    height: 80px;
+    width: 80px;
+  }
+}
+
+@keyframes toFree {
+  from {
+    width: 60px;
+  }
+  to {
+    width: 20px;
+  }
+}
+
+@keyframes toActive {
+  from {
+    width: 20px;
+  }
+  to {
+    width: 60px;
+  }
+}
