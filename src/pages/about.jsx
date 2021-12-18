@@ -33,10 +33,10 @@ export default function index() {
   const [bossCarouse, setBossCarousel] = useState([]);
 
   useEffect(() => {
-    getCarousel(0).then((res) => {
+    getCarousel(2).then((res) => {
       setCompanyCarousel(res.data);
     });
-    getCarousel(1).then((res) => {
+    getCarousel(3).then((res) => {
       console.log(1, res.data);
       setBossCarousel(res.data);
     });
