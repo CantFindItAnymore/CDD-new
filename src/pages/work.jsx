@@ -81,7 +81,13 @@ export default function index() {
           history.push('/work-detail');
         }}
       >
-        <Image width={400} src={item.images[0]?.filePath} />
+        <Image
+          width={400}
+          src={item.images[0]?.filePath}
+          preview={{
+            src: item.images[0]?.replace('_600*450', ''),
+          }}
+        />
         <div className={styles.itemDesc}>{item.name}</div>
       </div>
     ));

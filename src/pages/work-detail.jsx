@@ -3,40 +3,45 @@ import { Image } from 'antd';
 import { Helmet } from 'react-helmet';
 import zhCN from 'antd/es/locale/zh_CN';
 import { ConfigProvider } from 'antd';
-import Footer from '@/components/Footer'
+import Footer from '@/components/Footer';
 import 'animate.css';
 import styles from './work-detail.less';
 
-
 export default function index(props) {
+  const [detail, setDetail] = useState([]);
 
-    const [detail, setDetail] = useState([])
+  useEffect(() => {
+    setDetail(JSON.parse(localStorage.getItem('workDetail')));
+  }, []);
 
-    useEffect(() => {
-        setDetail(JSON.parse(localStorage.getItem('workDetail')))
-    }, []);
+  const createDetail = () => {
+    return detail.map((item) => {
+      return (
+        <div className={styles.detailItem} key={item.id}>
+          <Image
+            width={760}
+            src={item.filePath}
+            preview={{
+              src: item.filePath?.replace('_600*450', ''),
+            }}
+          />
+          <p>{item.text}</p>
+        </div>
+      );
+    });
+  };
 
-    const createDetail = () => {
-        return detail.map(item => {
-            return <div className={styles.detailItem} key={item.id}>
-                <Image width={760} src={item.filePath} />
-                <p>{item.text}</p>
-            </div>
-        })
-    }
-
-    return (
-        <ConfigProvider locale={zhCN}>
-            <Helmet>
-                <title>案例详情</title>
-            </Helmet>
-            <div className={styles.container}>
-                <div className={styles.detail}>{createDetail()}</div>
-
-            </div>
-            <div className={styles.footer}>
-                <Footer />
-            </div>
-        </ConfigProvider>
-    );
+  return (
+    <ConfigProvider locale={zhCN}>
+      <Helmet>
+        <title>案例详情</title>
+      </Helmet>
+      <div className={styles.container}>
+        <div className={styles.detail}>{createDetail()}</div>
+      </div>
+      <div className={styles.footer}>
+        <Footer />
+      </div>
+    </ConfigProvider>
+  );
 }

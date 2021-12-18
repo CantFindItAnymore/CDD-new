@@ -4,10 +4,7 @@ import { Helmet } from 'react-helmet';
 import { Carousel, Image } from 'antd';
 import styles from './about.less';
 
-
-import {
-  getCarousel
-} from '@/api/model'
+import { getCarousel } from '@/api/model';
 import { isTemplateMiddle } from 'typescript';
 
 // const people = [
@@ -32,23 +29,21 @@ import { isTemplateMiddle } from 'typescript';
 export default function index() {
   const [activePerson, setActivePerson] = useState('1');
 
-  const [companyCarouse, setCompanyCarousel] = useState([])
-  const [bossCarouse, setBossCarousel] = useState([])
+  const [companyCarouse, setCompanyCarousel] = useState([]);
+  const [bossCarouse, setBossCarousel] = useState([]);
 
   useEffect(() => {
-    getCarousel(0)
-      .then(res => {
-        setCompanyCarousel(res.data)
-      })
-    getCarousel(1)
-      .then(res => {
-        console.log(1, res.data)
-        setBossCarousel(res.data)
-      })
+    getCarousel(0).then((res) => {
+      setCompanyCarousel(res.data);
+    });
+    getCarousel(1).then((res) => {
+      console.log(1, res.data);
+      setBossCarousel(res.data);
+    });
   }, []);
 
   const afterChange = (index) => {
-    setActivePerson(bossCarouse[index].id);
+    setActivePerson(bossCarouse[index]?.id);
   };
   return (
     <Fragment>
@@ -65,7 +60,7 @@ export default function index() {
           <div className={styles.item}>
             <div className={styles.carousel}>
               <Carousel autoplay dotPosition="top" draggable>
-                {companyCarouse.map(item => (
+                {companyCarouse.map((item) => (
                   <img key={isTemplateMiddle.id} src={item.filePath} />
                 ))}
               </Carousel>
@@ -115,15 +110,14 @@ export default function index() {
             className={`animate__animated animate__fadeInDown animate__delay-1s ${styles.desc}`}
           >
             {/* {bossCarouse.find((item) => item.id === activePerson)?.text} */}
-            CCD香港鄭中設計事務所（Cheng Chung
-              Design）由著名設計師鄭忠先生（Joe
-              Cheng）創立，專業為國際品牌酒店提供室內設計及顧問服務，為全球客戶提供綜合的一體化設計服務和方案，是國際頂級品牌酒店室內設計機構之一。CCD獲得了包括GOLD
-              KEY，IIDA，HD等多個國際獎項，並在在美國《室內設計》雜誌2019年的全球酒店室內設計百大排名中名列第三，
-              綜合排名亞洲第一。2019年榮登“亞洲品牌500強”，2020年榮登“中國500最具價值品牌”，品牌估值97.58億，均成為第一個也是唯一上榜的設計品牌。創立至今，CCD已為30多個國際酒店管理集團如Marriott（萬豪）、InterContinental
-              Hotels Group（洲際） 、Hilton（希爾頓） 、Accor（雅高）
-              、Hyatt（凱悅） 、Mandarin Oriental（文華東方） 、Alila（阿麗拉）
-              、Shangri-La（香格里拉）、DIAOYUTAI MGM(釣魚臺美高梅）
-              、Wyndham（溫德姆）等旗下50多個國際品牌、100多家豪華酒店提供了出色的室內設計及顧問服務工作。最新酒店項目如上
+            CCD香港鄭中設計事務所（Cheng Chung Design）由著名設計師鄭忠先生（Joe
+            Cheng）創立，專業為國際品牌酒店提供室內設計及顧問服務，為全球客戶提供綜合的一體化設計服務和方案，是國際頂級品牌酒店室內設計機構之一。CCD獲得了包括GOLD
+            KEY，IIDA，HD等多個國際獎項，並在在美國《室內設計》雜誌2019年的全球酒店室內設計百大排名中名列第三，
+            綜合排名亞洲第一。2019年榮登“亞洲品牌500強”，2020年榮登“中國500最具價值品牌”，品牌估值97.58億，均成為第一個也是唯一上榜的設計品牌。創立至今，CCD已為30多個國際酒店管理集團如Marriott（萬豪）、InterContinental
+            Hotels Group（洲際） 、Hilton（希爾頓） 、Accor（雅高）
+            、Hyatt（凱悅） 、Mandarin Oriental（文華東方） 、Alila（阿麗拉）
+            、Shangri-La（香格里拉）、DIAOYUTAI MGM(釣魚臺美高梅）
+            、Wyndham（溫德姆）等旗下50多個國際品牌、100多家豪華酒店提供了出色的室內設計及顧問服務工作。最新酒店項目如上
           </div>
         </div>
       </Layout>
