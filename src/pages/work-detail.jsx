@@ -22,7 +22,7 @@ export default function index(props) {
             width={760}
             src={item.filePath}
             preview={{
-              src: item.filePath?.replace('_600*450', ''),
+              src: item.filePath,
             }}
           />
           <p>{item.text}</p>

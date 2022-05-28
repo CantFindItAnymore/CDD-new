@@ -85,7 +85,7 @@ export default function index() {
           width={400}
           src={item.images[0]?.filePath}
           preview={{
-            src: item.images[0]?.filePath?.replace('_600*450', ''),
+            src: item.images[0]?.filePath,
           }}
         />
         <div className={styles.itemDesc}>{item.name}</div>

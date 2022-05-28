@@ -127,7 +127,7 @@ export default function index() {
               <Image
                 src={child.filePath}
                 preview={{
-                  src: child.filePath?.replace('_600*450', ''),
+                  src: child.filePath,
                 }}
               />
               <p>{child.text}</p>

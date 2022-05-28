@@ -5,7 +5,7 @@ import { Carousel, Image } from 'antd';
 import styles from './about.less';
 
 import { getCarousel } from '@/api/model';
-import { isTemplateMiddle } from 'typescript';
+// import { isTemplateMiddle } from 'typescript';
 
 // const people = [
 //   {
@@ -61,7 +61,7 @@ export default function index() {
             <div className={styles.carousel}>
               <Carousel autoplay dotPosition="top" draggable>
                 {companyCarouse.map((item) => (
-                  <img key={isTemplateMiddle.id} src={item.filePath} />
+                  <img key={item.id} src={item.filePath} />
                 ))}
               </Carousel>
             </div>
