@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import { Image } from 'antd';
+import { Divider, Image } from 'antd';
 import { Helmet } from 'react-helmet';
 import zhCN from 'antd/es/locale/zh_CN';
 import { ConfigProvider } from 'antd';
@@ -25,7 +25,8 @@ export default function index(props) {
               src: item.filePath,
             }}
           />
-          <p>{item.text}</p>
+          <p style={{ fontSize: '16px' }}>{item.text}</p>
+          <Divider />
         </div>
       );
     });

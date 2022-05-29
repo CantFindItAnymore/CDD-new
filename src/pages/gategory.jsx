@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import Layout from '@/components/InnerLayout';
-import { Image, Pagination } from 'antd';
+import { Divider, Image, Pagination } from 'antd';
 import { Helmet } from 'react-helmet';
 import zhCN from 'antd/es/locale/zh_CN';
 import { ConfigProvider } from 'antd';
@@ -130,7 +130,8 @@ export default function index() {
                   src: child.filePath,
                 }}
               />
-              <p>{child.text}</p>
+              <p style={{ fontSize: '16px' }}>{child.text}</p>
+              <Divider />
             </div>
           );
         })}
