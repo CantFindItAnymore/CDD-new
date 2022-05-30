@@ -35,8 +35,16 @@ export default function index() {
             >
               联系方式
             </div>
-            <p>Pablo 17935698322</p>
-            <p>Pablo 17935698322</p>
+            <p>
+              <b>彭家乐</b>
+              <div>TEL: 17935698322</div>
+              <div>E-mail: 511434937@qq.com</div>
+            </p>
+            <p>
+              <b>章文轩</b>
+              <div>TEL: 15009603873</div>
+              <div>E-mail: 1622460231@qq.com</div>
+            </p>
           </div>
 
           {/* 子品牌 */}

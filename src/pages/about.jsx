@@ -66,15 +66,8 @@ export default function index() {
               </Carousel>
             </div>
             <p className="animate__animated animate__fadeInDown">
-              CCD香港鄭中設計事務所（Cheng Chung
-              Design）由著名設計師鄭忠先生（Joe
-              Cheng）創立，專業為國際品牌酒店提供室內設計及顧問服務，為全球客戶提供綜合的一體化設計服務和方案，是國際頂級品牌酒店室內設計機構之一。CCD獲得了包括GOLD
-              KEY，IIDA，HD等多個國際獎項，並在在美國《室內設計》雜誌2019年的全球酒店室內設計百大排名中名列第三，
-              綜合排名亞洲第一。2019年榮登“亞洲品牌500強”，2020年榮登“中國500最具價值品牌”，品牌估值97.58億，均成為第一個也是唯一上榜的設計品牌。創立至今，CCD已為30多個國際酒店管理集團如Marriott（萬豪）、InterContinental
-              Hotels Group（洲際） 、Hilton（希爾頓） 、Accor（雅高）
-              、Hyatt（凱悅） 、Mandarin Oriental（文華東方） 、Alila（阿麗拉）
-              、Shangri-La（香格里拉）、DIAOYUTAI MGM(釣魚臺美高梅）
-              、Wyndham（溫德姆）等旗下50多個國際品牌、100多家豪華酒店提供了出色的室內設計及顧問服務工作。最新酒店項目如上海佘山世茂洲際酒店、北京前門文華東方酒店、上海董家渡麗思卡爾頓酒店、美國洛杉磯環球影城喜來登酒店等。
+              Pablo
+              Design工作室由彭家乐，章文轩先生创立，专业为高端业主定制室内设计及顾问服务，提供综合的一体化设计和解决方案。涉及酒店，餐饮，会所，住宅等多个行业。在商业设计中提供完整的设计体系支持，秉持“美好的设计赋予生活的方方面面”的初心，全身心的投身设计行业，尽心为生活赋予美好感受。
             </p>
           </div>
           <div className={styles.person}>
@@ -110,14 +103,6 @@ export default function index() {
             className={`animate__animated animate__fadeInDown animate__delay-1s ${styles.desc}`}
           >
             {/* {bossCarouse.find((item) => item.id === activePerson)?.text} */}
-            CCD香港鄭中設計事務所（Cheng Chung Design）由著名設計師鄭忠先生（Joe
-            Cheng）創立，專業為國際品牌酒店提供室內設計及顧問服務，為全球客戶提供綜合的一體化設計服務和方案，是國際頂級品牌酒店室內設計機構之一。CCD獲得了包括GOLD
-            KEY，IIDA，HD等多個國際獎項，並在在美國《室內設計》雜誌2019年的全球酒店室內設計百大排名中名列第三，
-            綜合排名亞洲第一。2019年榮登“亞洲品牌500強”，2020年榮登“中國500最具價值品牌”，品牌估值97.58億，均成為第一個也是唯一上榜的設計品牌。創立至今，CCD已為30多個國際酒店管理集團如Marriott（萬豪）、InterContinental
-            Hotels Group（洲際） 、Hilton（希爾頓） 、Accor（雅高）
-            、Hyatt（凱悅） 、Mandarin Oriental（文華東方） 、Alila（阿麗拉）
-            、Shangri-La（香格里拉）、DIAOYUTAI MGM(釣魚臺美高梅）
-            、Wyndham（溫德姆）等旗下50多個國際品牌、100多家豪華酒店提供了出色的室內設計及顧問服務工作。最新酒店項目如上
           </div>
         </div>
       </Layout>
